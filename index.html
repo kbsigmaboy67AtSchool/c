@@ -4,7 +4,48 @@
 <meta charset="UTF-8">
 <title>kbsigmaboy67's link list</title>
 
-<style src="main.css">
+<style>
+body {
+    background: #000;
+    color: orange;
+    font-family: monospace;
+    margin: 0;
+    padding: 20px;
+    text-shadow: 0 0 6px currentColor;
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.link-row {
+    margin: 3px 0;
+}
+
+a {
+    color: #00aaff;
+    text-decoration: none;
+    text-shadow: 0 0 6px currentColor;
+}
+
+a:hover {
+    color: #33ccff;
+    text-decoration: underline;
+}
+
+.desc {
+    color: orange;
+    margin-left: 6px;
+}
+
+.section {
+    margin-top: 25px;
+    font-size: 18px;
+    border-bottom: 1px solid orange;
+    padding-bottom: 5px;
+}
 </style>
 </head>
 
@@ -13,7 +54,320 @@
 <h1>kbsigmaboy67's link list</h1>
 <div id="content"></div>
 
-<script src="main.js">
+<script>
+const linksText = `List of Chrome URLs
+chrome://access-code-cast
+chrome://accessibility
+chrome://accessory-update
+chrome://account-manager-error
+chrome://account-migration-welcome
+chrome://actor-overlay
+chrome://add-supervision
+chrome://app-disabled
+chrome://app-install-dialog
+chrome://app-service-internals
+chrome://arc-overview-tracing
+chrome://arc-power-control
+chrome://attribution-internals
+chrome://autofill-internals
+chrome://blob-internals
+chrome://bluetooth-internals
+chrome://bluetooth-pairing
+chrome://bookmarks
+chrome://bookmarks-side-panel.top-chrome
+chrome://borealis-credits
+chrome://borealis-installer
+chrome://borealis-motd
+chrome://camera-app
+chrome://cast-feedback
+chrome://certificate-manager
+chrome://chrome
+chrome://chrome-signin
+chrome://chrome-urls
+chrome://class-tools-remote-display
+chrome://cloud-upload
+chrome://color-internals
+chrome://comments-side-panel.top-chrome
+chrome://compare
+chrome://components
+chrome://confirm-password-change
+chrome://connection-help
+chrome://connection-monitoring-detected
+chrome://connectivity-diagnostics
+chrome://connectors-internals
+chrome://contextual-tasks
+chrome://crashes
+chrome://credits
+chrome://crostini-credits
+chrome://crostini-installer
+chrome://crostini-upgrader
+chrome://cryptohome
+chrome://customize-chrome-side-panel.top-chrome
+chrome://debug-webuis-disabled
+chrome://device-log
+chrome://diagnostics
+chrome://dino
+chrome://dlp-internals
+chrome://downloads
+chrome://drive-internals
+chrome://eche-app
+chrome://emoji-picker
+chrome://enterprise-reporting
+chrome://extended-updates-dialog
+chrome://extensions
+chrome://extensions-internals
+chrome://extensions-zero-state
+chrome://feedback
+chrome://file-manager
+chrome://files-internals
+chrome://flags
+chrome://floating-workspace
+chrome://focus-mode-media
+chrome://gcm-internals
+chrome://glic
+chrome://glic-fre
+chrome://gpu
+chrome://graduation
+chrome://growth-internals
+chrome://healthd-internals
+chrome://help-app
+chrome://histograms
+chrome://history
+chrome://history-clusters-side-panel.top-chrome
+chrome://history-side-panel.top-chrome
+chrome://indexeddb-internals
+chrome://inspect
+chrome://internals
+chrome://internet-config-dialog
+chrome://internet-detail-dialog
+chrome://kerberos-in-browser
+chrome://launcher-internals
+chrome://linux-proxy-config
+chrome://local-files-migration
+chrome://lock-network
+chrome://lock-reauth
+chrome://mall
+chrome://manage-mirrorsync
+chrome://management
+chrome://media-app
+chrome://media-engagement
+chrome://media-internals
+chrome://metrics-internals
+chrome://mobilesetup
+chrome://multidevice-internals
+chrome://multidevice-setup
+chrome://nearby
+chrome://nearby-internals
+chrome://net-export
+chrome://net-internals
+chrome://network
+chrome://new-tab-page
+chrome://new-tab-page-third-party
+chrome://newtab
+chrome://newtab-footer
+chrome://notification-tester
+chrome://ntp-tiles-internals
+chrome://office-fallback
+chrome://omnibox-popup.top-chrome
+chrome://oobe
+chrome://os-credits
+chrome://os-feedback
+chrome://os-print
+chrome://os-settings
+chrome://parent-access
+chrome://password-change
+chrome://password-manager
+chrome://password-manager-internals
+chrome://personalization
+chrome://policy
+chrome://power
+chrome://predictors
+chrome://print
+chrome://print-management
+chrome://privacy-sandbox-dialog
+chrome://privacy-sandbox-internals
+chrome://private-aggregation-internals
+chrome://process-internals
+chrome://profile-internals
+chrome://proximity-auth
+chrome://quota-internals
+chrome://read-later.top-chrome
+chrome://recorder-app
+chrome://reload-button.top-chrome
+chrome://reset-password
+chrome://sandbox
+chrome://sanitize
+chrome://saved-tab-groups-unsupported
+chrome://scanning
+chrome://search-engine-choice
+chrome://security-curtain
+chrome://segmentation-internals
+chrome://sensor-info
+chrome://serviceworker-internals
+chrome://set-time
+chrome://settings
+chrome://shimless-rma
+chrome://shopping-insights-side-panel.top-chrome
+chrome://shortcut-customization
+chrome://signin-internals
+chrome://site-engagement
+chrome://slow
+chrome://slow_trace
+chrome://smb-credentials-dialog
+chrome://smb-share-dialog
+chrome://suggest-internals
+chrome://support-tool
+chrome://sync-confirmation
+chrome://sync-internals
+chrome://sys-internals
+chrome://system
+chrome://tab-group-home
+chrome://tab-search.top-chrome
+chrome://tab-strip.top-chrome
+chrome://terms
+chrome://topics-internals
+chrome://translate-internals
+chrome://urgent-password-expiry-notification
+chrome://usb-internals
+chrome://vc-background
+chrome://version
+chrome://view-cert
+chrome://vm
+chrome://watermark
+chrome://web-app-internals
+chrome://webrtc-internals
+chrome://webui-browser
+chrome-untrusted://boca-app
+chrome-untrusted://camera-app
+chrome-untrusted://class-tools-remote-display
+chrome-untrusted://compose
+chrome-untrusted://crosh
+chrome-untrusted://data-sharing
+chrome-untrusted://demo-mode-app
+chrome-untrusted://eche-app
+chrome-untrusted://file-manager
+chrome-untrusted://focus-mode-player
+chrome-untrusted://help-app
+chrome-untrusted://help-app-kids-magazine
+chrome-untrusted://lens
+chrome-untrusted://lens-overlay
+chrome-untrusted://mako
+chrome-untrusted://media-app
+chrome-untrusted://ntp-microsoft-auth
+chrome-untrusted://os-feedback
+chrome-untrusted://print
+chrome-untrusted://privacy-sandbox-dialog
+chrome-untrusted://projector
+chrome-untrusted://projector-annotator
+chrome-untrusted://read-anything-side-panel.top-chrome
+chrome-untrusted://scanner-feedback
+chrome-untrusted://terminal
+
+Internal Debugging Page URLs
+Internal debugging pages are currently disabled.
+chrome://actor-internals
+chrome://autofill-ml-internals
+chrome://color-pipeline-internals
+chrome://commerce-internals
+chrome://data-sharing-internals
+chrome://discards
+chrome://download-internals
+chrome://family-link-user-internals
+chrome://history-clusters-internals
+chrome://infobar-internals
+chrome://interstitials
+chrome://legion-internals
+chrome://local-state
+chrome://location-internals
+chrome://media-router-internals
+chrome://memory-internals
+chrome://network-errors
+chrome://omnibox
+chrome://on-device-internals
+chrome://optimization-guide-internals
+chrome://profile-internals
+chrome://regional-capabilities-internals
+chrome://safe-browsing
+chrome://tab-strip-internals
+chrome://traces
+chrome://traces-internals
+chrome://tracing
+chrome://ukm
+chrome://user-actions
+chrome://user-education-internals
+chrome://webrtc-logs
+chrome://webui-gallery
+chrome://webuijserror
+
+Command URLs for Debug
+chrome://badcastcrash
+chrome://inducebrowsercrashforrealz
+chrome://inducebrowserdcheckforrealz
+chrome://crash
+chrome://crash/rust
+chrome://crashdump
+chrome://kill
+chrome://hang
+chrome://shorthang
+chrome://gpuclean
+chrome://gpucrash
+chrome://gpuhang
+chrome://memory-exhaust
+chrome://memory-pressure-critical
+chrome://memory-pressure-moderate
+chrome://webuijserror
+chrome://quit
+chrome://restart`;
+
+const container = document.getElementById("content");
+
+function describe(url) {
+    let clean = url
+        .replace("chrome://", "")
+        .replace("chrome-untrusted://", "")
+        .replace(".top-chrome", "")
+        .replace(/[-_/]/g, " ");
+
+    clean = clean.replace(/\b\w/g, l => l.toUpperCase());
+
+    return clean + " page";
+}
+
+linksText.split("\n").forEach(line => {
+    const trimmed = line.trim();
+
+    if (trimmed.startsWith("chrome")) {
+        const row = document.createElement("div");
+        row.className = "link-row";
+
+        const a = document.createElement("a");
+        a.href = trimmed;
+        a.textContent = trimmed;
+
+        const span = document.createElement("span");
+        span.className = "desc";
+        span.textContent = " - " + describe(trimmed);
+
+        row.appendChild(a);
+        row.appendChild(span);
+        container.appendChild(row);
+
+    } else if (trimmed !== "") {
+        const div = document.createElement("div");
+        div.className = "section";
+        div.textContent = trimmed;
+        container.appendChild(div);
+    }
+});
+
+window.onload = () => {
+    if (!location.href.startsWith("blob:")) {
+        const html = document.documentElement.outerHTML;
+        const blob = new Blob([html], { type: "text/html" });
+        const blobURL = URL.createObjectURL(blob);
+        location.replace(blobURL);
+    }
+};
 </script>
 
 </body>
